@@ -1,0 +1,9 @@
+App\Domain\Model\Points:
+  xml_format_output: true
+  xml_root_node_name: points
+  attributes:
+    count:
+    page:
+    perPage:
+    totalPages:
+    items:

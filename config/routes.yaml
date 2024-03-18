@@ -1,0 +1,11 @@
+# controllers:
+#     resource:
+#         path: ../src/Controller/
+#         namespace: App\Controller
+#     type: attribute
+
+# search inpost points
+search_points:
+    path:       /points/search
+    methods:    [POST,GET]
+    controller: App\UI\Controller\SearchPointsController::search

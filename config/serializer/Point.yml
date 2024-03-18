@@ -1,0 +1,6 @@
+App\Domain\Model\Point:
+  xml_format_output: true
+  xml_root_node_name: point
+  attributes:
+    name:
+    address:

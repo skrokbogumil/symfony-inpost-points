@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+	<div class="container">
+		<div class="row justify-content-md-center">
+			{{ form(form) }}
+		</div>
+        <table class="table caption-top">
+            <caption>Number of points {{ points|length }}</caption>
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">City</th>
+                    <th scope="col">Street</th>
+                    <th scope="col">Province</th>
+                    <th scope="col">PostCode</th>
+                    <th scope="col">BuildingNumber</th>
+                    <th scope="col">FlatNumber</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for pointKey in points|keys %}
+                    <tr>
+                        <td>{{pointKey}}</td>
+                        <td>{{points[pointKey].name}}</td>
+                        <td>{{points[pointKey].address.city}}</td>
+                        <td>{{points[pointKey].address.street}}</td>
+                        <td>{{points[pointKey].address.province}}</td>
+                        <td>{{points[pointKey].address.postCode}}</td>
+                        <td>{{points[pointKey].address.buildingNumber}}</td>
+                        <td>{{points[pointKey].address.flatNumber}}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+	</div>
+	{% endblock %}

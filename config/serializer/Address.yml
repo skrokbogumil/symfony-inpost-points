@@ -1,0 +1,15 @@
+App\Domain\Model\Address:
+  xml_format_output: true
+  xml_root_node_name: address
+  attributes:
+    line1:
+    line2:
+    city:
+    province:
+    postCode:
+      serialized_name: post_code
+    street:
+    buildingNumber:
+      serialized_name: building_number
+    flatNumber:
+      serialized_name: flat_number

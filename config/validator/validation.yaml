@@ -1,0 +1,11 @@
+App\UI\Form\Model\SearchPoints:
+    constraints:
+        - App\UI\Validator\SearchPoints: ~
+    properties:
+        street:
+            - Length: { max: 64, min: 3 }
+        city:
+            - NotBlank: ~
+            - Length: { max: 64, min: 3 }
+        postCode:
+            - Regex: { pattern: '/^[\d]{2}-[\d]{3}$/', message: 'This code need to be in ##-###, where # is number from 0-9' }
